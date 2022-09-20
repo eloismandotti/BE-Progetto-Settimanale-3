@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" 
+xmlns="http://xmlns.jcp.org/xml/ns/persistence" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+<persistence-unit name="database_week3_progettosettimanale">
+<properties>
+
+<!-- gestisce la connessione con il database -->
+
+<property name ="javax.persistence.jbdc.driver" value= "org.postgresql.Driver" />
+
+<!-- gestisce la posizione del database nella rete -->
+
+<property name ="javax.persistence.jbdc.url" value= "jdbc.postgresql://Localhost: 5432/ database_week3_progettosettimanale" />
+
+<!-- credenziali per il collegamento -->
+
+<property name ="javax.persistence.jbdc.user" value= "postgres" />
+<property name ="javax.persistence.jbdc.password" value= "Postgresql333" />
+
+<!-- configurazione Hibernate -->
+<!-- specifica del dialetto SQP da utilizzare -->
+
+<property name ="hibernate.dialect" value= "org.hibernate.dialect.PostgreSQLDialect" />
+
+<!-- specificare schema postgres -->
+<property name ="hibernate.default_schema" value= "public" />
+
+<!-- specificare comportamento hibernate per modificare db -->
+
+<property name ="hibernate.hbm2ddl" value= "create" />
+
+<property name="hibernate." value=""/>
+<!-- Chiedo a Hibernate di mostrare i comandi SQL inviati al database -->
+
+<property name="hibernate.show_sql" value="true" />
+
+</properties>
+</persistence-unit>
+</persistence>
+
